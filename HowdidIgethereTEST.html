@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1" name="viewport" charset="urf-8" />
+	<title> How? </title>
+	<style>
+		body{
+			overflow: hidden;
+			background-color: black;
+			position: relative;
+		}
+		html * {
+			font-size: 15px ;
+			line-height: 1.625 ;
+			color: #FFFFFF ;
+			font-family: Georgia, sans-serif;
+		}
+		video {
+			margin:  10% auto ;
+		}
+		button {
+			margin:  0 auto ;
+			background-color: grey;
+			color: #000000 ;
+		}
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 70vh;
+		}
+		table {
+			text-align: center;
+		}
+		@media screen and (max-width: 900px) {
+			body{
+				font-size: 20px;
+			}
+			video {
+				width: 654px;
+				height: 280px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<table>
+			<tr>
+				<td>
+					<button id="button" onclick="playvid()" />how did I get here</button>
+				</td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td>
+					<button style="border: 0; background-color: black;"id="button2" onclick="playvid2()" />where?</button>
+				</td>
+			</tr>
+			<video width="854" height="480" autoplay playsinline preload loop id="Video"/> 
+			<source src="Once in a Lifetime.mp4" type="video/mp4" /> </video>
+			<video width="854" height="480" autoplay playsinline preload loop id="Video2"/> 
+			<source src="Talking Heads - Road to Nowhere.mp4" type="video/mp4" /> </video>
+		</div>
+		<script>
+			Video.style.display = "none";
+			var vid = document.getElementById("Video");
+			var Button = document.getElementById("Button");
+			function playvid() {
+				Video.style.display = "inline";
+				button.style.display = "none";
+				button2.style.display = "none";
+				button
+				vid.currentTime = 1.5;
+				vid.play();
+			}
+			Video2.style.display = "none";
+			var vid2 = document.getElementById("Video2");
+			var Button2 = document.getElementById("Button2");
+			function playvid2() {
+				Video2.style.display = "inline";
+				button.style.display = "none";
+				button2.style.display = "none";
+				button2
+				vid2.currentTime = 1;
+				vid2.play();
+				document.body.style.backgroundColor = "#6082ca";
+			}
+		</script>
+	</body>
+	</html>
