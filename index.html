@@ -6,7 +6,7 @@
 	<style>
 		body{
 			overflow: hidden;
-			background-color: black;
+			background-color: #6082ca;
 			position: relative;
 		}
 		html * {
@@ -20,14 +20,14 @@
 		}
 		button {
 			margin:  0 auto ;
-			background-color: grey;
+			background-color: #f4d95d;
 			color: #000000 ;
 		}
-		div {
+		div{
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 70vh;
+			height: 95vh;
 		}
 		table {
 			text-align: center;
@@ -48,42 +48,47 @@
 		<table>
 			<tr>
 				<td>
-					<button id="button" onclick="playvid()" />how did I get here</button>
+					<button id="button" onclick="playvid()" />Road to Where?</button>
 				</td>
 			</tr>
-			<tr></tr>
+			<tr>
+				<td><p id="text">Released June 10, 1985. <br>Happy birthday Little Creatures.</p></td>
+			</tr>
 			<tr>
 				<td>
-					<button style="border: 0; background-color: black;"id="button2" onclick="playvid2()" />where?</button>
+					<img id="art" src="https://upload.wikimedia.org/wikipedia/en/c/ce/Thlittlecreates.jpg">
 				</td>
 			</tr>
-			<video width="854" height="480" autoplay playsinline preload loop id="Video"/> 
-			<source src="Once in a Lifetime.mp4" type="video/mp4" /> </video>
-			<video width="854" height="480" autoplay playsinline preload loop id="Video2"/> 
-			<source src="Road to Nowhere.mp4" type="video/mp4" /> </video>
-		</div>
-		<script>
-			Video.style.display = "none";
-			var vid = document.getElementById("Video");
-			var Button = document.getElementById("Button");
-			function playvid() {
-				Video.style.display = "inline";
-				button.style.display = "none";
-				button2.style.display = "none";
-				vid.currentTime = 1.5;
-				vid.play();
-			}
-			Video2.style.display = "none";
-			var vid2 = document.getElementById("Video2");
-			var Button2 = document.getElementById("Button2");
-			function playvid2() {
-				Video2.style.display = "inline";
-				button.style.display = "none";
-				button2.style.display = "none";
-				vid2.currentTime = 1;
-				vid2.play();
-				document.body.style.backgroundColor = "#6082ca";
-			}
-		</script>
-	</body>
-	</html>
+			<tr>
+				<td><ol id="tracks"><li>"And She Was"</li>
+					<li>"Give Me Back My Name"</li>
+					<li>"Creatures of Love"</li>
+					<li>"The Lady Don't Mind"</li>
+					<li>"Perfect World"</li>
+					<li>"Stay Up Late"</li>
+					<li>"Walk It Down"</li>
+					<li>"Television Man"</li>
+					<li><strong>"Road to Nowhere"</strong></li>
+				</ol></td>
+			</tr>
+		</table>
+		<video width="854" height="480" autoplay playsinline preload loop id="Video"/> 
+		<source src="Road to Nowhere.mp4" type="video/mp4" /> </video>
+	</div>
+	<script>
+		Video.style.display = "none";
+		var vid = document.getElementById("Video");
+		var Button = document.getElementById("Button");
+		function playvid() {
+			text.style.display = "none";
+			tracks.style.display = "none";
+			art.style.display = "none";
+			Video.style.display = "inline";
+			button.style.display = "none";
+			vid.currentTime = 1.5;
+			vid.play();
+		}
+	</script>
+</body>
+</html>
+
